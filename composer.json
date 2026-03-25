@@ -8,5 +8,11 @@
       "Core\\": "src/"
     }
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/xvladah/core"
+    }
+  ],
   "require": {}
 }
