@@ -1,0 +1,12 @@
+{
+  "name": "xvladah/core",
+  "description": "Web basic Core",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Core\\": "src/"
+    }
+  },
+  "require": {}
+}
