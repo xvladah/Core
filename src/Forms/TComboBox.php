@@ -1,5 +1,7 @@
 <?php
 
+namespace Core\Forms;
+
 class TComboBox extends TFormControl implements IFormControl
 {
 

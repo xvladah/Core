@@ -1,5 +1,7 @@
 <?php
 
+namespace Core\Forms;
+
 class TFormInteger extends TFormNumericControl implements IFormControl
 {
     public function __construct(string $name)

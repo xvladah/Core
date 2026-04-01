@@ -11,6 +11,8 @@
 
 declare(strict_types=1);
 
+namespace Core\Html;
+
 use JetBrains\PhpStorm\NoReturn;
 
 class THtml extends TElement

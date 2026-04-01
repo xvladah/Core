@@ -22,6 +22,10 @@
  */
 //declare(strict_types=1);
 
+namespace Core\User;
+use Core\Html\TUrl;
+use Core\TConsts;
+
 abstract class TUser
 {
     const bool USE_IP_FOR_AUTH = true;

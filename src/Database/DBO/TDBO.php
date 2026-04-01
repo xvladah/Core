@@ -1,6 +1,13 @@
 <?php
 
-	class TDBO extends TSQLBase
+    namespace Core\Database\DBO;
+
+    use Core\Database\PDO\EPDOBase;
+    use Core\Database\PDO\TPDO;
+    use PDO;
+    use PDOStatement;
+
+    class TDBO extends TSQLBase
 	{
         const string TABLE_NAME        = '';
         const array TABLE_FUNCTIONS   = [];
@@ -655,7 +662,7 @@
         /**
          * Funkce vrací následující číselnou hodnotu do řady sloupečku $column, pokud není specifikován, bere se PRIMARY KEY
          *
-         * @param ?srting $column
+         * @param ?string $column
          * @param array $where_params
          * @param ?string $from
          * @return int

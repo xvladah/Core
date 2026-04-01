@@ -9,9 +9,15 @@
  * @copyright Vladimír Horký, 2018
  */
 
+namespace Core;
+
 const PHP_TAB = "\t";
 
 require_once __DIR__ . DIRECTORY_SEPARATOR . 'Lang' .DIRECTORY_SEPARATOR.'TLang.php';
+
+use Core\Html\TUrl;
+use Core\User\TRights;
+use Core\User\TUser;
 
 class TConsts
 {
@@ -130,16 +136,16 @@ class TConsts
 		return $zal[$notice_type_id][$column];
 	}
 
-	public static function optionsNoticeTypes(array $result = [], string $column = 'name')
-	{
+	public static function optionsNoticeTypes(array $result = [], string $column = 'name'): array
+    {
 		foreach(self::NoticeTypes() as $notice_type_id => $zaznam)
 			$result[$notice_type_id] = $zaznam[$column];
 
 		return $result;
 	}
 
-	public static function optionsFilterNoticeTypes(array $result = [], string $column = 'name')
-	{
+	public static function optionsFilterNoticeTypes(array $result = [], string $column = 'name'): array
+    {
 		$result[self::STATUS_ALL] = '- '.__('box.all', 'Vše').' -';
 
 		foreach(self::NoticeTypes() as $notice_type_id => $zaznam)
@@ -158,8 +164,8 @@ class TConsts
 	{
 		return [
 			TRights::ADMIN		    => ['name'=>__('right.administrators', 'Administrátoři')],
-			TRightsEx::MANAGER	    => ['name'=>__('right.managers', 'Správci systému')],
-			TRightsEx::UNIT_MANAGER	=> ['name'=>__('right.unit_controllers', 'Revizoři jednotek')],
+		//	TRightsEx::MANAGER	    => ['name'=>__('right.managers', 'Správci systému')],
+		//	TRightsEx::UNIT_MANAGER	=> ['name'=>__('right.unit_controllers', 'Revizoři jednotek')],
 		];
 	}
 	public static function optionsNoticeRights(array $result = [], string $column = 'name') :array

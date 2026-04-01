@@ -1,5 +1,6 @@
 <?php
 
+namespace Core\Forms;
 class TFormGPS extends TFormControlText implements IFormControl
 {
     public function __construct($name)

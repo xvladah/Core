@@ -22,6 +22,11 @@
 
 declare(strict_types=1);
 
+namespace Core\Console;
+
+use Core\TErrors;
+use Exception;
+
 class TLogger
 {
     protected const int DEFAULT_DAYS 			    = 14;

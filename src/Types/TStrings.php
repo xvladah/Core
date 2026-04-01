@@ -45,6 +45,7 @@
 
 declare(strict_types=1);
 
+namespace Core\Types;
 class TStrings
 {
     public static function str_not_containsi(string $value, array $array): bool

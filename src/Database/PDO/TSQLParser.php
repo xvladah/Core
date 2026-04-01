@@ -1,5 +1,8 @@
 <?php
 
+namespace Core\Database\PDO;
+use PDO;
+
 class TSQLParser
 {	
 	public const string CRLF = "\n";
@@ -22,8 +25,8 @@ class TSQLParser
 		return $this;
 	}
 	
-	protected function convertStr(?string $value)
-	{
+	protected function convertStr(?string $value): false|string|null
+    {
 		if($this->encoding_input !== $this->encoding_output)
 			return iconv($this->encoding_input, $this->encoding_output, $value);
 		else

@@ -1,5 +1,6 @@
 <?php
 
+namespace Core\Forms;
 class TRadio extends TFormControl implements IFormControl
 {
     public function __construct($value, $nodeValue)

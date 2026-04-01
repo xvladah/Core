@@ -9,7 +9,12 @@
    * @version 3.0
    *
    */
-	class TPDO extends PDO
+    namespace Core\Database\PDO;
+
+	use Exception;
+    use PDO;
+
+    class TPDO extends PDO
 	{
 		public const int PDO_DRIVER_MYSQL 	= 1;
         public const int PDO_DRIVER_DBLIB	= 2;

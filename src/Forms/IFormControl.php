@@ -1,5 +1,7 @@
 <?php
 
+namespace Core\Forms;
+
 interface IFormControl
 {
     function setName(string $value);

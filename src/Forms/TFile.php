@@ -1,5 +1,7 @@
 <?php
 
+namespace Core\Forms;
+
 class TFile extends TFormControl implements IFormControl
 {
     public function __construct($name, $options = [])

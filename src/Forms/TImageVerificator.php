@@ -1,5 +1,6 @@
 <?php
 
+namespace Core\Forms;
 class TImageVerificator extends TText implements IFormControl
 {
     protected bool $caseSensitive = true;

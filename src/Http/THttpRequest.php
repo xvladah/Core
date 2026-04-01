@@ -20,6 +20,8 @@
 
 // declare(strict_types=1);
 
+namespace Core\Http;
+
 class THttpRequest
 {
 	public static function Encode(?string $text) :string

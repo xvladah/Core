@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+namespace Core\File;
 class TSysMeasurement
 {
     protected float $startTime = 0;

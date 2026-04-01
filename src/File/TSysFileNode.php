@@ -2,14 +2,13 @@
 
 declare(strict_types=1);
 
+namespace Core\File;
+
 abstract class TSysFileNode
 {
     protected ?string $name  	 = null;
     protected ?string $directory = null;
 
-    /**
-     * @throws ESysFile
-     */
     public function __construct(?string $fullname)
     {
         $this->setFullName($fullname);

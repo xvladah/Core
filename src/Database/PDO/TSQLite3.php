@@ -10,6 +10,10 @@
  * -- added function getVersion()
  */
 
+namespace Core\Database\PDO;
+
+use SQLite3;
+
 class TSQLite3 extends SQLite3
 {
     public function beginTransaction(): bool

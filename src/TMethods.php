@@ -9,6 +9,8 @@
 * @copyright Vladimír Horký
 */
 
+namespace Core;
+
 class TMethods
 {
 public static function getPersonalName(array $osoba, string $filter = 'name', string $prefix = '') :string
@@ -54,7 +56,7 @@ public static function getPersonalName(array $osoba, string $filter = 'name', st
     return $result;
 }
 
-public static function getAddress(string $adresa) :string
+public static function getAddress(array $adresa) :string
 {
     $result = '';
 

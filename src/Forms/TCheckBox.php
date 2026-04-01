@@ -1,5 +1,7 @@
 <?php
 
+namespace Core\Forms;
+
 class TCheckBox extends TFormControl implements IFormControl
 {
     public function __construct($name)

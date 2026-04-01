@@ -11,6 +11,7 @@
 
 declare(strict_types=1);
 
+namespace Core\Html;
 class TList
 {
 	public array $items;

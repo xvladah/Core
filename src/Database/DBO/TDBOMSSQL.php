@@ -1,5 +1,11 @@
 <?php
 
+namespace Core\Database\DBO;
+
+use Core\Database\PDO\EPDOBase;
+use PDO;
+use PDOStatement;
+
 class TDBOMSSQL extends TDBO
 {
     /**

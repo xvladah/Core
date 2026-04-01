@@ -1,5 +1,6 @@
 <?php
 
+namespace Core\Forms;
 class TSearch extends TFormControlText implements IFormControl
 {
 

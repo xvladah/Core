@@ -13,6 +13,7 @@
 
 declare(strict_types=1);
 
+namespace Core\Utils;
 class TPicture
 {
 	private string $filename	= '';
@@ -57,7 +58,7 @@ class TPicture
 		return in_array(self::getExt($filename), array('pjpeg','jpeg','jpg','png','x-png','gif'));
 	}
 
-	public function save(string $format = 'jpg') :Picture
+	public function save(string $format = 'jpg') :TPicture
 	{
 		$this->resizeImage($this->filename, $this->filename, 0, 0, $this->width, $this->height, $this->width, $this->height);
 		return $this;

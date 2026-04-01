@@ -11,6 +11,7 @@
 
 declare(strict_types=1);
 
+namespace Core\Console;
 abstract class TConsoleModule implements IConsoleModule
 {
 	const int ERR_FILE_NOT_FOUND	= -1000;
@@ -22,8 +23,9 @@ abstract class TConsoleModule implements IConsoleModule
 	
     const int SUCCESS_CODE_OK 		= 1000;
     const int SUCCESS_CODE_PRINT 	= 2000;
-    
-	public array $params;
+    const array MODULE_ACTIONS = [];
+
+    public array $params;
 	
 	public function __construct(array $params = [])
 	{
@@ -69,7 +71,6 @@ abstract class TConsoleModule implements IConsoleModule
 	/**
 	 * Funkce vraci nazev korenoveho adresare
 	 *
-	 * @param string $homedir
 	 * @return string
 	 */	
 	public static function getProjectName() :string

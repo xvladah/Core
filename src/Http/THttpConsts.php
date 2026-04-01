@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+namespace Core\Http;
 class THttpConsts
 {
     const int HTTP_CODE_200 = 200;

@@ -14,6 +14,8 @@
 
 declare(strict_types=1);
 
+namespace Core\Mail;
+
 class TMailer extends PHPMailer
 {
 	private string $style 		=

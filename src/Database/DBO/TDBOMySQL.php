@@ -1,5 +1,9 @@
 <?php
 
+namespace Core\Database\DBO;
+
+use mysqli;
+
 class TDBOMySQL extends TSQLBase
 {
     const string TABLE_NAME = '';

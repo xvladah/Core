@@ -1,5 +1,11 @@
 <?php
 
+namespace Core\Database\DBO;
+
+use Exception;
+use SQLite3;
+use SQLite3Result;
+
 class TDBOSQLite extends TSQLBase
 {
     const string HOUR_FORMAT					= '%H';

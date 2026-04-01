@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+namespace Core\Html;
 class TBody extends TElement
 {
     public function __construct()

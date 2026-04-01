@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+namespace Core\Console;
 class TCLIColors
 {
     public const array FOREGROUND_COLORS = [

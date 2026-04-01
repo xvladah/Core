@@ -16,6 +16,11 @@
  *
  */
 
+namespace Core\Compress;
+
+use Exception;
+use ZipArchive;
+
 class TZipArchive extends ZipArchive
 {
     public string $archiveFile;

@@ -20,6 +20,9 @@
 
 declare(strict_types=1);
 
+namespace Core\Http;
+use CurlHandle;
+
 abstract class THttpAuthClient
 {
     const int AUTH_TYPE_NONE  = 0;

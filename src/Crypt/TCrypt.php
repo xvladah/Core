@@ -14,6 +14,8 @@
 
 declare(strict_types=1);
 
+namespace Core\Crypt;
+
 final class TCrypt
 {
     private string $key = '1qazxdr5';

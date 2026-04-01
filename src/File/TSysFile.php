@@ -24,6 +24,8 @@
 
 declare(strict_types=1);
 
+namespace Core\File;
+
 class TSysFile extends TSysFileNode
 {
 	public function exists() :bool

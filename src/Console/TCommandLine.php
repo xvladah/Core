@@ -14,6 +14,7 @@
 
 declare(strict_types=1);
 
+namespace Core\Console;
 class TCommandLine
 {
 	private static function each(array &$arr): false|array

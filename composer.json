@@ -14,5 +14,15 @@
       "url": "https://github.com/xvladah/core"
     }
   ],
-  "require": {}
+  "require": {
+    "ext-pdo": "*",
+    "ext-sqlite3": "*",
+    "ext-mysqli": "*",
+    "ext-mbstring": "*",
+    "ext-iconv": "*",
+    "ext-curl": "*",
+    "ext-calendar": "*",
+    "ext-gd": "*",
+    "ext-zip": "*"
+  }
 }

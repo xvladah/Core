@@ -1,5 +1,6 @@
 <?php
 
+namespace Core\Forms;
 class TMultiComboBox extends TComboBox implements IFormControl
 {
     /** pokud je multicombobox pouzit ve formulari, musi se automaticky vybirat polozka, pokud je jenom jedna **/

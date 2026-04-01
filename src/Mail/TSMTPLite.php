@@ -12,15 +12,17 @@
  * @licence Vladimir Horky, TEDOM a.s.
  */
 
+namespace Core\Mail;
+
 class TSMTPLite
 {
-    const server = 'smtp.email.cz';
-	const localhost = 'localhost';
-	const login = 'email@email.cz';
-    const password = '';
-    const port = 25;
-    const timeout = 1;
-    const newline = "\r\n";
+    const string server = 'smtp.email.cz';
+	const string localhost = 'localhost';
+	const string login = 'email@email.cz';
+    const string password = '';
+    const int port = 25;
+    const int timeout = 1;
+    const string newline = "\r\n";
 
     private string $from = 'email@email.cz';
     private string $namefrom = 'From';
@@ -33,33 +35,33 @@ class TSMTPLite
     {
     }
 
-    public function setFrom(string $form, string $fromname)
+    public function setFrom(string $form, string $fromname): static
     {
     	$this->form = $form;
     	$this->fromname = $fromname;
     	return $this;
     }
 
-    public function setTo(string $to)
+    public function setTo(string $to): static
     {
     	$this->to = $to;
     	return $this;
     }
 
-	public function setSubject(string $subject)
-	{
+	public function setSubject(string $subject): static
+    {
 		$this->subject = $subject;
 		return $this;
 	}
 
-	public function setMessage(string $message)
-	{
+	public function setMessage(string $message): static
+    {
 		$this->message = $message;
 		return $this;
 	}
 
-	public function addMessageLine(string $line = '')
-	{
+	public function addMessageLine(string $line = ''): static
+    {
 		if($this->message != '')
 			$this->message .= '<br />';
 
@@ -67,13 +69,13 @@ class TSMTPLite
 		return $this;
 	}
 
-	public function getLogger()
-	{
+	public function getLogger(): array
+    {
 		return $this->logger;
 	}
 
-    function send()
-	{
+    function send(): bool
+    {
           $conn = fsockopen(self::server, self::port, $errno, $errstr, self::timeout);
           $log = fgets($conn, 515);
           if(empty($conn)) {

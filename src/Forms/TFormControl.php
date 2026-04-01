@@ -20,6 +20,8 @@
 *
 */
 
+namespace Core\Forms;
+
 class TFormControl extends TElement implements IFormControl
 {
     protected array $group = [];

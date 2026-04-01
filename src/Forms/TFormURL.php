@@ -1,5 +1,6 @@
 <?php
 
+namespace Core\Forms;
 class TFormURL extends TFormControlText implements IFormControl
 {
     private string $protocol = 'http';

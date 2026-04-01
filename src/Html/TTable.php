@@ -23,6 +23,7 @@
 
 declare(strict_types=1);
 
+namespace Core\Html;
 class TTable extends TElement
 {
     public array $widths 		= [];

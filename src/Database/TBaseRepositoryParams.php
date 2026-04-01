@@ -1,5 +1,10 @@
 <?php
 
+namespace Core\Database;
+use Core\Http\THttpRequest;
+use Core\TErrors;
+use Exception;
+
 class TBaseRepositoryParams
 {
     const int PARAM_ID              = 0;

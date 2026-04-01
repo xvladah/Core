@@ -1,5 +1,6 @@
 <?php
 
+namespace Core\Types;
 class TJSON
 {
     public static function jsonTrimToFit(?array $data, int $maxLength = 65400): string

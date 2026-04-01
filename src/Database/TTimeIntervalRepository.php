@@ -2,6 +2,9 @@
 
 declare(strict_types=1);
 
+namespace Core\Database;
+use Core\Types\TDateTime;
+
 abstract class TTimeIntervalRepository extends TBaseRepository
 {
     public array $resampleData = [];

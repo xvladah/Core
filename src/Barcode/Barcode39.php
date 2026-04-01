@@ -12,6 +12,8 @@
  * This is free software and is distributed WITHOUT ANY WARRANTY
  */
 
+namespace Core\Barcode;
+
 final class Barcode39 {
 	/**
 	 * Code 39 format 2 specifications
@@ -148,9 +150,9 @@ final class Barcode39 {
 	 *
 	 * @param string|null $code
 	 */
-	public function  __construct(string $code = null) {
+	public function  __construct(?string $code = null) {
 		// format and code
-		$code = (string)strtoupper($code);
+		$code = strtoupper($code);
 
 		// convert code to code array
 		$i = 0;

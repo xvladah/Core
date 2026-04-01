@@ -1,5 +1,6 @@
 <?php
 
+namespace Core\Forms;
 class TButton extends TFormControl implements IFormControl
 {
 

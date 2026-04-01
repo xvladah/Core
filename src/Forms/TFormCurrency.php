@@ -1,5 +1,7 @@
 <?php
 
+namespace Core\Forms;
+
 class TFormCurrency extends TFormFloat implements IFormControl
 {
     public function __construct($name, int $decimals = 2)

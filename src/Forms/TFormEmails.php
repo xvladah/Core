@@ -1,5 +1,6 @@
 <?php
 
+namespace Core\Forms;
 class TFormEmails extends TFormControlText implements IFormControl
 {
     private $separator = ',';

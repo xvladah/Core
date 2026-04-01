@@ -57,6 +57,11 @@
  *
  **/
 
+namespace Core\Database\DBO;
+
+use Exception;
+use PDOException;
+
 class TSQLBase
 {
     const string TIME_FORMAT			= '%H:%i';
@@ -154,7 +159,7 @@ class TSQLBase
                 throw new ESQLBase('SQL WHERE: Unknown column '.$key, -210);
     }
 
-    protected static function StringDataTypes()
+    protected static function StringDataTypes(): array
     {
         return [
             self::DATA_TYPE_TIME,

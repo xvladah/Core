@@ -57,6 +57,10 @@
 
 declare(strict_types=1);
 
+namespace Core\Types;
+use DateTimeZone;
+use Exception;
+
 class TDateTime
 {
 	const int MINUTE	= 60;

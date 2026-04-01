@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+namespace Core\Lang;
+use Core\Types\TStrings;
+use Exception;
+
 class TLangParser extends TLang
 {
     const array SUPPORTED_EXTS = ['php','phtml','php3','php4','php5','php7'];
@@ -13,7 +17,7 @@ class TLangParser extends TLang
      *
      * @filename string
      * @delimiter string
-     * @return bool
+     * @return string
      */
     public function SaveToCSV() :string
     {
@@ -33,7 +37,7 @@ class TLangParser extends TLang
      * Funkce generuje PHP soubor s jazykovými položkami
      *
      * @param string $mutation
-     * @return int
+     * @return string
      */
     public function SaveToPHP(string $mutation) :string
     {
@@ -74,8 +78,9 @@ EOT;
      * Funkce načítá jazykové položky ze souboru CSV
      *
      * @param string $filename
-     * @param int $column
+     * @param int $langid
      * @return int
+     * @throws Exception
      */
     public function LoadFromCSV(string $filename, int $langid) :int
     {
@@ -223,9 +228,8 @@ EOT;
      * Funkce doplňuje fráze do zadaného CSV souboru ze souborů (většinou PHP), které leží ve specifikovaných cestách
      *
      * @param string $filename
-     * @param string $delimiter
-     * @param number $column
-     * @return int
+     * @return string
+     * @throws Exception
      */
     public function AppendToCSV(string $filename) :string
     {
@@ -274,9 +278,8 @@ EOT;
      * Funkce, ktera nacte fraze ze slovniku
      *
      * @param string $filename
-     * @param string $delimiter
-     * @throws Exception
      * @return int
+     * @throws Exception
      */
 
     public function LoadPhrases(string $filename) :int

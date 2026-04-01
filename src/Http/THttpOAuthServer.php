@@ -14,6 +14,7 @@
 
 declare(strict_types=1);
 
+namespace Core\Http;
 abstract class THttpOAuthServer
 {
     private ?string $token_code = null;

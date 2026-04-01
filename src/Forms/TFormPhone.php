@@ -1,5 +1,6 @@
 <?php
 
+namespace Core\Forms;
 class TFormPhone extends TFormControlText implements IFormControl
 {
     const PHONE_NONE 	= 0;

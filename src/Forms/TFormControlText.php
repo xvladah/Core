@@ -1,5 +1,7 @@
 <?php
 
+namespace Core\Forms;
+
 class TFormControlText extends TFormControl
 {
     public bool $ucfirst   = false;

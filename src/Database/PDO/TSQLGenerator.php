@@ -1,5 +1,6 @@
 <?php
 
+namespace Core\Database\PDO;
 class TSQLGenerator extends TSQLParser
 {	
 	public static function StrDecode(?string $str): ?string

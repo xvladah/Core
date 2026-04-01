@@ -11,6 +11,10 @@
 
 /*declare(strict_types=1);*/
 
+namespace Core\Utils;
+
+use GdImage;
+
 class TImageCode
 {
     const string BASIC_FONT     = __DIR__. DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'Font'.DIRECTORY_SEPARATOR.'futura.otf';

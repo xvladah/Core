@@ -1,5 +1,12 @@
 <?php
 
+namespace Core\Database;
+
+use Core\Database\PDO\TPDO;
+use Core\Html\TCookies;
+use Core\Http\THttpRequest;
+use Core\TConsts;
+
 class TBaseRepository extends TBaseRepositoryParams
 {
     const array ORDER = [];

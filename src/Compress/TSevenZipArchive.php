@@ -9,6 +9,9 @@
  * @copyright Vladimír Horký, 2023 TEDOM
  */
 
+namespace Core\Compress;
+
+use Exception;
 
 class TSevenZipArchive
 {

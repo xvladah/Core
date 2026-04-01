@@ -1,5 +1,6 @@
 <?php
 
+namespace Core\Forms;
 class THidden extends TFormControl implements IFormControl
 {
     public function __construct($name, $value)

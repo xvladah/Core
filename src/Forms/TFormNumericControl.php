@@ -1,5 +1,7 @@
 <?php
 
+namespace Core\Forms;
+
 class TFormNumericControl extends TFormControlText implements IFormControl
 {
     private $thousand_sep = ' ';

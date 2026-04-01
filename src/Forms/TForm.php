@@ -18,6 +18,7 @@
 * added new function addNote
 */
 
+namespace Core\Forms;
 class TForm extends TElement
 {
     const string FORM_SESSION_NAME = 'fsession';

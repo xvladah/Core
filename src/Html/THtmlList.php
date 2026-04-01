@@ -12,6 +12,7 @@
 
 declare(strict_types=1);
 
+namespace Core\Html;
 class TLi extends TElement
 {
     public function __construct(array $attrs = [])

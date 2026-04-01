@@ -9,6 +9,11 @@
 * @copyright Vladimír Horký, 2019
 */
 
+
+namespace Core;
+
+use Exception;
+
 class TErrors
 {
     const int UNKNOWN						= 0;

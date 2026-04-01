@@ -11,6 +11,7 @@
 
 declare(strict_types=1);
 
+namespace Core\User;
 abstract class TRights
 {
 	const int GUEST 		= -1;

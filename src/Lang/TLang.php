@@ -26,6 +26,7 @@
 
 declare(strict_types=1);
 
+namespace Core\Lang;
 class TLang
 {
     public static ?TLang $instance = null;

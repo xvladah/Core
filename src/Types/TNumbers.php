@@ -34,6 +34,7 @@
 
 //declare(strict_types=1);
 
+namespace Core\Types;
 class TNumbers {
 
     const int SMALLINT_SIGNED_MIN = -32768;
@@ -46,13 +47,14 @@ class TNumbers {
     const int TINYINT_UNSIGNED_MIN = 0;
     const int TINYINT_UNSIGNED_MAX = 255;
 
-	/**
-	 * Funkce vrací formátovaný řetězec ze zadaného reálného čísla ve formátu '# ###,##' s daným počtem desetinných míst
-	 *
-	 * @param float $number
-	 * @param number $dec
-	 * @return string
-	 */
+    /**
+     * Funkce vrací formátovaný řetězec ze zadaného reálného čísla ve formátu '# ###,##' s daným počtem desetinných míst
+     *
+     * @param string|int|float|null $number
+     * @param int $dec
+     * @param bool $trim
+     * @return string
+     */
 	public static function format(string|int|float|null $number, int $dec = 0, bool $trim = false): string
     {
 		if($number != '')
@@ -70,13 +72,14 @@ class TNumbers {
         return $result;
 	}
 
-	/**
-	 * Funkce vrací formátovaný řetězec ze zadaného reálného čísla ve formátu '####.##' s daným počtem desetinných míst
-	 *
-	 * @param float $number
-	 * @param number $dec
-	 * @return string
-	 */
+    /**
+     * Funkce vrací formátovaný řetězec ze zadaného reálného čísla ve formátu '####.##' s daným počtem desetinných míst
+     *
+     * @param string|int|float|null $number
+     * @param int $dec
+     * @param bool $trim
+     * @return string
+     */
 	public static function value(string|int|float|null $number, int $dec = 0, bool $trim = false): string
     {
 		if($number != '')
@@ -94,13 +97,14 @@ class TNumbers {
         return $result;
 	}
 
-	/**
-	 * Funkce vrací formátovaný řetězec ze zadaného reálného čísla ve formátu '####,##' s daným počtem desetinných míst
-	 *
-	 * @param float $number
-	 * @param number $dec
-	 * @return string
-	 */
+    /**
+     * Funkce vrací formátovaný řetězec ze zadaného reálného čísla ve formátu '####,##' s daným počtem desetinných míst
+     *
+     * @param string|int|float|null $number
+     * @param int $dec
+     * @param bool $trim
+     * @return string
+     */
 	public static function valuestr(string|int|float|null $number, int $dec = 0, bool $trim = false): string
     {
 		if($number != '')
@@ -118,12 +122,12 @@ class TNumbers {
         return $result;
 	}
 
-	/**
-	 * Funkce zaokrouhluje kladná čísla nahoru, záporná čísla dolů
-	 *
-	 * @param string value
-	 * @return float
-	 */
+    /**
+     * Funkce zaokrouhluje kladná čísla nahoru, záporná čísla dolů
+     *
+     * @param int|float|null $value value
+     * @return float|null
+     */
 	public static function round_up(int|float|null $value): ?float
     {
         if($value != '')
@@ -142,12 +146,13 @@ class TNumbers {
             return $value;
 	}
 
-	/**
-	 * Funkce podstraňuje mezery ze zadaného řetězce čísla
-	 *
-	 * @param string $str
-	 * @return ?string
-	 */
+    /**
+     * Funkce podstraňuje mezery ze zadaného řetězce čísla
+     *
+     * @param string|int|float|null $str
+     * @param string|null $default
+     * @return ?string
+     */
 	public static function strtonumber(null|string|int|float $str, ?string $default = null): ?string
     {
 		if($str != '')
@@ -156,12 +161,13 @@ class TNumbers {
 			return $default;
 	}
 
-	/**
-	 * Funkce převádí řetězec na celé číslo int
-	 *
-	 * @param string $str
-	 * @return ?int
-	 */
+    /**
+     * Funkce převádí řetězec na celé číslo int
+     *
+     * @param string|int|null $str
+     * @param int|null $default
+     * @return ?int
+     */
 	public static function strtoint(null|string|int $str, ?int $default = null): ?int
     {
 		if($str != '')
@@ -170,12 +176,13 @@ class TNumbers {
 			return $default;
 	}
 
-	/**
-	 * Funkce převádí řetězec na reálné číslo
-	 *
-	 * @param string $str
-	 * @return ?float
-	 */
+    /**
+     * Funkce převádí řetězec na reálné číslo
+     *
+     * @param string|int|float|null $str
+     * @param float|null $default
+     * @return ?float
+     */
 	public static function strtofloat(null|string|int|float $str, ?float $default = null): ?float
     {
 		if($str != '')

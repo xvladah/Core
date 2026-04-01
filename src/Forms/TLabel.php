@@ -1,5 +1,6 @@
 <?php
 
+namespace Core\Forms;
 class TLabel extends TFormControl implements IFormControl
 {
     public function __construct()

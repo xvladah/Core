@@ -1,5 +1,6 @@
 <?php
 
+namespace Core\Forms;
 class TRadioList extends TFormControl implements IFormControl
 {
     public function __construct($name, $options = [])

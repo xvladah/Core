@@ -10,6 +10,7 @@
 
 declare(strict_types=1);
 
+namespace Core\Html;
 class TCookies
 {
 	const int COOKIE_TIMEOUT 	= 3600000;

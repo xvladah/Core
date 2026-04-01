@@ -11,6 +11,7 @@
 
 declare(strict_types=1);
 
+namespace Core\Http;
 class THttpAuthServerUserRights
 {
 	protected array $items = [];

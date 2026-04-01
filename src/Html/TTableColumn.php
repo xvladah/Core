@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+namespace Core\Html;
 class TTableColumn extends TTableCell
 {
 

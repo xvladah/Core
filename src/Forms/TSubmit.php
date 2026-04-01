@@ -1,5 +1,6 @@
 <?php
 
+namespace Core\Forms;
 class TSubmit extends TFormControl implements IFormControl
 {
 

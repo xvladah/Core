@@ -1,5 +1,6 @@
 <?php
 
+namespace Core\Forms;
 class TFormFloat extends TFormNumericControl implements IFormControl
 {
     private ?int $decimals  = null;

@@ -1,6 +1,8 @@
 <?php
 
-class EDateTime extends Exception
+namespace Core\Types;
+
+class EDateTime extends \Exception
 {
 
 }

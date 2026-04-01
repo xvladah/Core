@@ -1,5 +1,7 @@
 <?php
 
+namespace Core\Forms;
+
 class TFormTime extends TFormControlText implements IFormControl
 {
     private $format = null;
