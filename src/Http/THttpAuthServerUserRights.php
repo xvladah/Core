@@ -12,6 +12,11 @@
 declare(strict_types=1);
 
 namespace Core\Http;
+use Core\Database\PDO\TPDO;
+use Core\TErrors;
+use Core\User\TRights;
+use Exception;
+
 class THttpAuthServerUserRights
 {
 	protected array $items = [];
@@ -81,7 +86,7 @@ class THttpAuthServerUserRights
 			}
 				
 		} catch (Exception $e) {
-			die('User Rights Error: '.TErrorsEx::formatException($e));
+			die('User Rights Error: '.TErrors::formatException($e));
 		}
 		
 		return $this;

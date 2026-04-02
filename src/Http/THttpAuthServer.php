@@ -19,6 +19,8 @@
 declare(strict_types=1);
 
 namespace Core\Http;
+use Exception;
+
 abstract class THttpAuthServer
 {
 	const int AUTH_TYPE_BASIC = 1;

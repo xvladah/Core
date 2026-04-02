@@ -9,6 +9,14 @@
  * @copyright	Vladimir Horky, 2019 
  */
 
+namespace Core\Database\DBO\bin;
+
+use Core\Console\EConsoleModule;
+use Core\Console\IConsoleModule;
+use Core\Console\TConsoleModule;
+use Core\Database\DBO\TSQLBase;
+use const Core\PHP_TAB;
+
 const MYSQL_ENGINE = 'InnoDB';
 const MYSQL_COLLATE = 'utf8_general_ci';
 const REPOSITORY_ROOT = __DIR__ . '/../../../src/Repository/';
@@ -35,14 +43,14 @@ class TDBOConsoleModule extends TConsoleModule implements IConsoleModule
 		$this->search = REPOSITORY_ROOT;
 	}
 		
-	public function setSearch(string $search)
-	{
+	public function setSearch(string $search): static
+    {
 		$this->search = $search;
 		return $this;
 	}
 		
-	private function searchForFiles(string $path)
-	{
+	private function searchForFiles(string $path): int
+    {
 		$dirs = scandir($path);
 		foreach($dirs as $dir)
 		{

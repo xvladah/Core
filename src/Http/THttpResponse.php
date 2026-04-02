@@ -4,6 +4,8 @@
 
 namespace Core\Http;
 
+use Core\TErrors;
+use Exception;
 use JetBrains\PhpStorm\NoReturn;
 
 /**
@@ -138,7 +140,7 @@ class THttpResponse
 		
 		die(json_encode([
 			'result'=> $code,
-			'err'	=> TErrorsEx::formatException($e)
+			'err'	=> TErrors::formatException($e)
 		]));
 	}
 
@@ -158,13 +160,13 @@ class THttpResponse
 	
 	private static function is_json($string): bool
     {
-		return ((is_string($string) &&
+		return is_string($string) &&
 			(is_object(json_decode($string)) ||
-				is_array(json_decode($string, true))))) ? true : false;
+				is_array(json_decode($string, true)));
 	}
 	
-	public static function ParamsToStr(bool $prefix = true, string $prefix_text = ', ')
-	{
+	public static function ParamsToStr(bool $prefix = true, string $prefix_text = ', '): string
+    {
 		$result = '';
 		
 		if(count($_GET) > 0)

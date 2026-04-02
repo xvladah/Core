@@ -9,7 +9,6 @@
 * @copyright Vladimír Horký, 2019
 */
 
-
 namespace Core;
 
 use Exception;

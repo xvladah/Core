@@ -12,6 +12,8 @@
 declare(strict_types=1);
 
 namespace Core\Http;
+use Core\User\TRights;
+
 class THttpAuthServerUser
 {
 	protected ?int $user_id;

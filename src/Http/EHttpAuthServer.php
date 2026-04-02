@@ -1,6 +1,8 @@
 <?php
 
 namespace Core\Http;
+use Exception;
+
 class EHttpAuthServer extends Exception
 {
     const int HTTP_INTERNAL_SERVER_ERROR = 500;

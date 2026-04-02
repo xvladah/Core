@@ -48,12 +48,11 @@ class TLang
     /**
      * Funkce vrací požadovaný text z aktuální jazykové mutace
      *
-     * @param string $textid
-     * @param int $lang
+     * @param ?string $sysid
      * @param string $default
      * @return string
      */
-    public function __($sysid, $default)
+    public function __(?string $sysid, string $default = ''): string
     {
         if($sysid != '')
         {

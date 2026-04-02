@@ -1,5 +1,13 @@
 <?php
 
+namespace Core\Lang\bin;
+
+use Core\Console\EConsoleModule;
+use Core\Console\IConsoleModule;
+use Core\Console\TConsoleModule;
+use Core\Lang\TLangParser;
+use const Core\PHP_TAB;
+
 class TLangConsoleModule extends TConsoleModule implements IConsoleModule
 {
    const string MODULE_NAME = 'lang';

@@ -4,16 +4,23 @@
  * @author Vladimír Horký
  */
 
+namespace Core\Crypt\bin;
+
+use Core\Console\EConsoleModule;
+use Core\Console\IConsoleModule;
+use Core\Console\TConsoleModule;
+use Core\Crypt\TCrypt;
+
 class TCryptConsoleModule extends TConsoleModule implements IConsoleModule
 {
     protected const string MODULE_NAME = 'crypt';
-    protected const array MODULE_ACTIONS = [
+    public const array MODULE_ACTIONS = [
         'encrypt' => 'encrypts input string, syntax: console crypt:encrypt <text_to_encrypt>',
         'decrypt' => 'decrypts input string, syntax: console crypt:decrypt <text_to_decrypt>'
     ];
 
     /**
-     * @throws EConsoleModuleException
+     * @throws EConsoleModule
      */
     public function execute(string &$output) :int
     {
@@ -43,13 +50,13 @@ class TCryptConsoleModule extends TConsoleModule implements IConsoleModule
                             $output = $this->help();
                         break;
 
-                    default	: throw new EConsoleModuleException('Action "'.$this->params['action'].'" not valid (available is only encrypt, decrypt, help), see help!', self::ERR_ACTION_NOT_FOUND);
+                    default	: throw new EConsoleModule('Action "'.$this->params['action'].'" not valid (available is only encrypt, decrypt, help), see help!', self::ERR_ACTION_NOT_FOUND);
                 }
             } else {
-                throw new EConsoleModuleException('Not defined input string, see help!', self::ERR_ACTION_NOT_FOUND);
+                throw new EConsoleModule('Not defined input string, see help!', self::ERR_ACTION_NOT_FOUND);
             }
         } else {
-            throw new EConsoleModuleException('Action "'.$this->params['action'].'" not defined, see help!', self::ERR_ACTION_NOT_FOUND);
+            throw new EConsoleModule('Action "'.$this->params['action'].'" not defined, see help!', self::ERR_ACTION_NOT_FOUND);
         }
 
         return self::SUCCESS_CODE_OK;
